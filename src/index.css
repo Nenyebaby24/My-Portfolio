@@ -1,0 +1,386 @@
+/* ==============================
+   GLOBAL STYLES
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==============================
+   NAVBAR
+============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #005b8f;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+  color:#005b8f;
+}
+
+.nav-links a:hover {
+  color: #0077b5;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+  margin-left: 25px;
+}
+
+.nav-icons a {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Brand colors for LinkedIn & WhatsApp */
+.nav-icons .linkedin {
+  color: #0077b5;
+}
+
+.nav-icons .whatsapp {
+  color: #25d366;
+}
+
+.nav-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 20px;
+  background-color: #f5f7fa;
+}
+
+.hero-text {
+  max-width: 550px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #005b8f;
+}
+
+.hero-buttons .btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: #0077b5;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #005b8f;
+}
+
+.hero-buttons .btn secondary {
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: #005b8f;
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background-color: #333;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* ==============================
+   PROJECTS SECTION
+============================== */
+/* ==============================
+   PROJECT CARDS
+============================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px 400px; /* first row shorter, second row taller */
+  gap: 20px;
+  justify-items: center;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* First row images — shorter */
+.projects-grid .project-card:nth-child(-n+3) img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain; /* Show full image */
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #eee;
+}
+
+/* Second row images — taller */
+.projects-grid .project-card:nth-child(n+4) img {
+  height: 300px;
+  width: 100%;
+  object-fit: contain; /* Show full image */
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #eee;
+}
+
+.project-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #005b8f;
+  text-align: center;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #666;
+  padding: 0 10px 10px;
+  text-align: center;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* ==============================
+   ABOUT & SERVICES
+============================== */
+.about,
+.services {
+  padding: 60px 20px;
+  text-align: center;
+  color: #005b8f;
+  background-color: #f8f9fa;
+}
+
+.about h2,
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.about p,
+.services p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.service-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.service-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* ==============================
+   CONTACT SECTION
+============================== */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  color: #005b8f;
+  background-color: #f2f8ff;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+}
+.contact-icon{
+  color: #25d366; /* WhatsApp green */
+}
+
+.cta-btn{
+  color: #ffffff;
+  background-color: #b50000;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer; /* email red */
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.95rem;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .project-card img {
+    height: auto;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .nav-icons {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
