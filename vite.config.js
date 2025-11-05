@@ -1,27 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/', // ✅ ensures assets load from the root
   build: {
     rollupOptions: {
-      // prevents Rollup from erroring on optional dependencies
-      external: [],
       onwarn(warning, warn) {
-        if (
-          warning.code === 'UNRESOLVED_IMPORT' ||
-          warning.message.includes('externalize this module')
-        ) {
-          console.warn('⚠️ Ignoring optional import:', warning.message)
-          return
-        }
-        warn(warning)
+        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
+        warn(warning);
       },
     },
   },
 })
 
+    
 
 
  
