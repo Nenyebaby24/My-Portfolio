@@ -167,13 +167,6 @@ a {
 /* ==============================
    PROJECT CARDS
 ============================== */
-.projects{
-  padding: 60px 20px;
-  text-align: center;
-  color: #005b8f;
-  background-color: #f8f9fa;
-  margin-bottom: 40px;
-}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
