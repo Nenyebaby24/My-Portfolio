@@ -383,6 +383,58 @@ footer {
   }
 }
 
+/* ==============================
+   HAMBURGER MENU STYLES
+============================== */
+
+/* Hide hamburger icon on desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: #005b8f;
+  cursor: pointer;
+}
+
+/* Ensure nav-links work normally on desktop */
+.nav-links.active {
+  display: flex;
+}
+
+/* ==============================
+   MOBILE NAVIGATION
+============================== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none; /* hidden by default */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex; /* show when toggled */
+  }
+
+  /* Keep icons below menu or hide them on small screens */
+  .nav-icons {
+    display: none;
+  }
+}
+
+
 
 
 
